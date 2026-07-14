@@ -3,8 +3,16 @@
   gap: 6px;
   border-bottom: 1px solid #b8b8b8a1;
 
-  i {
-    font-size: 2rem;
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 18px;
+    background: var(--purple-secondary);
+
+    i {
+      color: var(--purple-primary);
+      font-size: 2rem;
+    }
   }
 
   .logo-text {
