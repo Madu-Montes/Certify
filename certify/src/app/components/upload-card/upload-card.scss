@@ -1,0 +1,129 @@
+.container-upload{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:2rem;
+}
+
+.content{
+  width:100%;
+  max-width:560px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+h1{
+  margin:0;
+  font-size:2rem;
+  font-weight:700;
+  color:#1f2937;
+}
+
+.subtitle{
+  margin:.5rem 0 2rem;
+  color:#6b7280;
+  font-size:.95rem;
+}
+
+.upload-container{
+  width:100%;
+  min-height:330px;
+  padding:2.5rem;
+  border:2px dashed #d9dee6;
+  border-radius:22px;
+  background:#fafafa;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:.25s;
+
+  &.drag-over{
+    border-color:var(--green-primary);
+    background:#eef9ef;
+  }
+}
+
+.icon-wrapper{
+  width:76px;
+  height:76px;
+  border-radius:20px;
+  background:#dff2d4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:1.5rem;
+}
+
+.excel-icon{
+  font-size:40px!important;
+  width:40px!important;
+  height:40px!important;
+  color:var(--green-primary);
+}
+
+.upload-text{
+  text-align:center;
+  color:#5f6368;
+  margin-bottom:1.5rem;
+  line-height:1.5;
+
+  span{
+    display:block;
+    font-size:.9rem;
+    margin-top:.2rem;
+  }
+}
+
+.upload-button{
+  width:220px;
+  height:48px;
+  border-radius:12px!important;
+  background:var(--green-primary)!important;
+  color:#fff!important;
+  font-weight:600!important;
+}
+
+.formats-text{
+  margin-top:1.2rem;
+  color:#6b7280;
+  font-size:.82rem;
+}
+
+.download-btn{
+  margin-top:2rem;
+  width:260px;
+  height:58px;
+  border:none;
+  border-radius:14px;
+  background:#dff2d4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:.9rem;
+  cursor:pointer;
+  transition:.2s;
+
+  i{
+    font-size:20px;
+    color:var(--green-primary);
+  }
+
+  strong{
+    display:block;
+    font-size:.82rem;
+    color:#2d6b23;
+  }
+
+  span{
+    display:block;
+    font-size:.72rem;
+    color:#6b7280;
+  }
+
+  &:hover{
+    transform:translateY(-2px);
+  }
+}

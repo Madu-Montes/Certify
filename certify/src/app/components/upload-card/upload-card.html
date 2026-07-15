@@ -1,1 +1,58 @@
-<p>upload-card works!</p>
+<div class="container-upload">
+
+  <div class="content">
+
+    <h1>Importar planilha</h1>
+    <p class="subtitle">Envie sua planilha com os dados dos formandos</p>
+
+    <div
+      class="upload-container"
+      [class.drag-over]="isDragging"
+      (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave()"
+      (drop)="onDrop($event)">
+
+      <div class="icon-wrapper">
+        <mat-icon class="excel-icon">description</mat-icon>
+      </div>
+
+      <p class="upload-text">
+        Arraste sua planilha aqui
+        <span>ou</span>
+      </p>
+
+      <input
+        #fileInput
+        type="file"
+        accept=".xlsx,.xls"
+        (change)="onFileSelected($event)"
+        hidden>
+
+      <button
+        mat-flat-button
+        class="upload-button"
+        (click)="fileInput.click()">
+
+        Enviar planilha
+        <mat-icon>arrow_forward</mat-icon>
+
+      </button>
+
+      <span class="formats-text">
+        Formatos aceitos: .xlsx e .xls
+      </span>
+
+    </div>
+
+    <button class="download-btn" (click)="downloadSpreadsheet()">
+      <i class="ph ph-download-simple"></i>
+
+      <div>
+        <strong>Baixar modelo de exemplo</strong>
+        <span>Arquivo Excel (.xlsx)</span>
+      </div>
+    </button>
+
+  </div>
+
+</div>
