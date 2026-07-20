@@ -1,0 +1,67 @@
+{
+  "hash": "12823440",
+  "configHash": "9f6a089c",
+  "lockfileHash": "cc6df2b5",
+  "browserHash": "49a55a76",
+  "optimized": {
+    "@angular/cdk/bidi": {
+      "src": "../../../../../../node_modules/@angular/cdk/fesm2022/bidi.mjs",
+      "file": "@angular_cdk_bidi.js",
+      "fileHash": "f3bd9f9a",
+      "needsInterop": false
+    },
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "299b9793",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "9d894966",
+      "needsInterop": false
+    },
+    "@angular/material/button": {
+      "src": "../../../../../../node_modules/@angular/material/fesm2022/button.mjs",
+      "file": "@angular_material_button.js",
+      "fileHash": "e21e48ad",
+      "needsInterop": false
+    },
+    "@angular/material/icon": {
+      "src": "../../../../../../node_modules/@angular/material/fesm2022/icon.mjs",
+      "file": "@angular_material_icon.js",
+      "fileHash": "6fdf0011",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "ffce2098",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "d78bf869",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-RBYLRM6U": {
+      "file": "chunk-RBYLRM6U.js"
+    },
+    "chunk-QIZCYINO": {
+      "file": "chunk-QIZCYINO.js"
+    },
+    "chunk-C7GHSLRK": {
+      "file": "chunk-C7GHSLRK.js"
+    },
+    "chunk-LW3TY6MN": {
+      "file": "chunk-LW3TY6MN.js"
+    },
+    "chunk-25PXA3AX": {
+      "file": "chunk-25PXA3AX.js"
+    }
+  }
+}
