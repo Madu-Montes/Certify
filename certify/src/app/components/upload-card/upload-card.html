@@ -5,38 +5,46 @@
     <h1>Importar planilha</h1>
     <p class="subtitle">Envie sua planilha com os dados dos formandos</p>
 
-    <div
-      class="upload-container"
-      [class.drag-over]="isDragging"
-      (dragover)="onDragOver($event)"
-      (dragleave)="onDragLeave()"
-      (drop)="onDrop($event)">
+    <div class="upload-container" [class.drag-over]="isDragging" (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave()" (drop)="onDrop($event)">
 
       <div class="icon-wrapper">
         <mat-icon class="excel-icon">description</mat-icon>
       </div>
 
-      <p class="upload-text">
-        Arraste sua planilha aqui
-        <span>ou</span>
-      </p>
+      <ng-container *ngIf="!selectedFile; else uploaded">
+        <p class="upload-text">
+          Arraste sua planilha aqui
+          <span>ou</span>
+        </p>
+      </ng-container>
 
-      <input
-        #fileInput
-        type="file"
-        accept=".xlsx,.xls"
-        (change)="onFileSelected($event)"
-        hidden>
+      <ng-template #uploaded>
+        <div class="file-info">
+          <strong>{{ selectedFile?.name }}</strong>
 
-      <button
-        mat-flat-button
-        class="upload-button"
-        (click)="fileInput.click()">
+          <span>{{ (selectedFile!.size / 1024).toFixed(1) }} KB </span>
+        </div>
+      </ng-template>
 
-        Enviar planilha
-        <mat-icon>arrow_forward</mat-icon>
+      <div class="btns d-flex gap-2">
+        <input #fileInput type="file" accept=".xlsx,.xls" (change)="onFileSelected($event)" hidden>
 
-      </button>
+        <button mat-flat-button class="upload-button" (click)="fileInput.click()">
+          {{ selectedFile ? 'Trocar arquivo' : 'Enviar planilha' }}
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+
+        @if(fileIsValid){
+
+        <button mat-flat-button color="primary" class="send-button" (click)="uploadSpreadsheet()">
+          Enviar
+          <mat-icon iconPositionEnd>
+            cloud_upload
+          </mat-icon>
+        </button>
+        }
+      </div>
 
       <span class="formats-text">
         Formatos aceitos: .xlsx e .xls

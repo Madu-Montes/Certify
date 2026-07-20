@@ -41,20 +41,33 @@ export class UploadCard {
     }
   }
 
-  private validateAndProcessFile(file: File) {
-    const fileExtension = file.name.split('.').pop()?.toLowerCase();
-
-    if (fileExtension === 'xlsx' || fileExtension === 'xls') {
-      console.log('Arquivo aceito com sucesso:', file.name);
-    } else {
-      alert('Formato inválido! Por favor, envie apenas arquivos .xlsx ou .xls');
-    }
-  }
-
   downloadSpreadsheet(): void {
     const link = document.createElement('a');
     link.href = '/templates/planilha-modelo.xlsx';
     link.download = 'planilha-modelo.xlsx';
     link.click();
+  }
+
+  uploadSpreadsheet() {
+    if (!this.selectedFile) return;
+
+    console.log(this.selectedFile);
+  }
+
+  selectedFile: File | null = null;
+  fileIsValid = false;
+
+  private validateAndProcessFile(file: File) {
+    const extension = file.name.split('.').pop()?.toLowerCase();
+
+    if (extension === 'xlsx' || extension === 'xls') {
+      this.selectedFile = file;
+      this.fileIsValid = true;
+    } else {
+      this.selectedFile = null;
+      this.fileIsValid = false;
+
+      alert('Formato inválido');
+    }
   }
 }
